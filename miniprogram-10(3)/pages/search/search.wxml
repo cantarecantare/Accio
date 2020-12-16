@@ -1,0 +1,36 @@
+<!--pages/search/search.wxml-->
+<view class="top">
+  <view class="topsearch">
+    <view class="frame">
+      <input value="{{shoopingtext}}" bindinput="shoppinginput"></input>
+    </view>
+    <button size="mini" bindtap="search">搜索</button>
+  </view>
+</view>
+
+
+<view class="history" wx:if="{{history}}">
+  <view class="history_title">
+    <text>历史搜索</text>
+    <image src="/pages/images/delete.png" mode="widthFix" style="width:5%;" bindtap="cleanhistory"></image>
+  </view>
+  <view class="history_text">
+    <text wx:for="{{newArray}}" wx:key="key" data-text="{{item}}" bindtap="textfz">{{item}}</text>
+  </view>
+</view>
+<view class="none" wx:if="{{noneview}}">
+  <image src="/images/null.png" mode="widthFix" style="width:20%"></image>
+  <text>没有这个哦</text>
+</view>
+
+
+<view class='swiper_con' wx:if="{{shoppinglist}}">
+  <view class='swiper_con_view' wx:for="{{shoopingarray}}" wx:key="id" wx:if='{{item.status=="1"?true:false}}'>
+
+    <view style="width:90%;margin:5%;">
+      <text style="font-size:50rpx">{{item.title}}</text>
+      <text style="font-size:50rpx">在{{item.store}}</text>
+     
+    </view>
+  </view>
+</view>

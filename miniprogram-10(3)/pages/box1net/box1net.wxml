@@ -1,0 +1,10 @@
+<!--pages/box1net/box1net.wxml-->
+
+<block wx:for="{{array.Lasor}}" wx:for-item="l">
+      <block wx:for="{{array.Press}}" wx:for-item="p">
+          <block wx:if="{{l==1 && p==0}}">
+            <input type="text" name="Price_Name" class="desc-input"  data-index="{{index}}" data-tag="Price_Name" bindblur='setInputValue' placeholder='输入' value=""/>
+            <button class="jianhao" size="mini" data-index="{{index}}" bindtap='deletePrice'>删除</button>
+      </block>
+   </block>
+</block>

@@ -1,0 +1,8 @@
+<!--pages/box2/box2.wxml-->
+<view class="price-detail" wx:for="{{addPrice}}" wx:key="">
+        <view class="descp-value">
+          <input type="text" name="Price_Name" class="desc-input"  data-index="{{index}}" data-tag="Price_Name" bindblur='setInputValue' placeholder='输入' value=""/>
+        </view>
+     <button class="addButton" size="mini" data-index="{{index}}" bindtap='addNewPrice'>新增</button>
+    <button class="jianhao" size="mini" data-index="{{index}}" bindtap='deletePrice'>删除</button>
+      </view>

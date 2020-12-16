@@ -1,0 +1,22 @@
+/**index.wxss**/
+.title{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:200rpx;
+  color:rgb(45, 51, 143)
+
+}
+.button {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: rgb(239, 223, 250);
+  text-align: center;
+  padding-top: 0vh;
+  padding-bottom: 0vh
+}
+.search{
+  position:absolute; /* 使用绝对定位 */
+  top:200px; /* 距离上边距：20px */
+  left:70px;
+}

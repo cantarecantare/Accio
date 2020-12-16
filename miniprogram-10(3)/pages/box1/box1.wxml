@@ -1,0 +1,37 @@
+<!--pages/box1/box1.wxml-->
+<view class="price-detail" wx:for="{{addPrice}}" wx:key="">
+        <view class="descp-value">
+          <input type="text" name="Price_Name" class="desc-input"  data-index="{{index}}" data-tag="Price_Name" bindblur='setInputValue' placeholder='输入' value=""/>
+        </view>
+     <button class="addButton" size="mini" data-index="{{index}}" bindtap='addNewPrice'>新增</button>
+    <button class="jianhao" size="mini" data-index="{{index}}" bindtap='deletePrice'>删除</button>
+      </view>
+<view class="net">
+   <button size="default" bindtap='net'>点击进入自动模式</button>
+</view>
+
+
+<!--弹窗-->
+<block wx:if="{{isShowConfirm}}">
+      <view class='toast-box'>
+        <view class='toastbg'></view>
+        <view class='showToast'>
+            <view class='toast-title'>
+                <text>新增物品</text>
+            </view>
+            <view class='toast-main'>
+                <view class='toast-input'>
+                    <input placeholder='输入物品名称' bindinput='setValue' data-name='stuEidtName'></input>
+                </view>
+            </view>
+            <view class='toast-button'>
+                <view class='button1'>
+                    <button catchtap='confirmAcceptance'>确定</button>
+                </view>
+                <view class='button2'>
+                    <button data-url="../allOrder/allOrder" catchtap='cancel'>取消</button>
+                </view>
+            </view>
+        </view>
+    </view>
+  </block>

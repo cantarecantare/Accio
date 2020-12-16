@@ -1,0 +1,11 @@
+<!--index.wxml-->
+
+
+<view class="title">收纳</view>
+
+<button size="default" type="primary" bindtap="box1">箱子A</button>
+<button size="default" type="primary"  bindtap="box2">箱子B</button>
+
+<view class="search"> 
+  <button bindtap='nav'>搜索</button>
+</view>

@@ -1,0 +1,6 @@
+/* pages/box2/box2.wxss */
+.price-detail{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}

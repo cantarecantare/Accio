@@ -1,0 +1,9 @@
+/* pages/box1net/box1net.wxss */
+.price-detail{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.net{
+  top:100px;
+}
